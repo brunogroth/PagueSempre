@@ -29,6 +29,3 @@ Content-Type: application/json
 
 ### Deletar /deletar/ID ###
 DELETE https://localhost:5001/api/contas/deletar/6
-
-
-

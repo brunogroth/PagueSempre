@@ -3,11 +3,13 @@ using System.Linq;
 using PagueSempre.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace PagueSempre.Controllers{
+namespace PagueSempre.Controllers
+{
     [ApiController]
      [Route("api/TipoConta")]
 
-    public class TipoContaController : ControllerBase{
+    public class TipoContaController : ControllerBase
+    {
     private readonly DataContext _context;
     public TipoContaController(DataContext context) => _context = context;
     
@@ -27,6 +29,39 @@ namespace PagueSempre.Controllers{
 
         return Created("Criado com sucesso!", tipodeConta);
     }
+     //PATCH/api/TipoConta/ Alterar
+    [Route("alterar")]
+    [HttpPatch]
+    public IActionResult Alterar ([FromBody] TipoConta AlterarTipoConta)
+    {
+        _context.TipoConta.Update(AlterarTipoConta);
+        _context.SaveChanges();
+        return Ok (AlterarTipoConta); 
     }
-
+    //delete/api/tipoconta/deletar
+    [Route("deletar/{id}")]
+    [HttpDelete]
+    public IActionResult Deletar ([FromRoute] int ID)
+    {
+        TipoConta deletarTipoConta = _context.TipoConta.Find(ID);
+        if(deletarTipoConta != null)
+        {
+            _context.TipoConta.Remove(deletarTipoConta);
+            _context.SaveChanges();
+            return Ok (deletarTipoConta);
+        }
+        return NotFound();
+    }
+    //pesquisar/api/tipoconta/buscar
+    [HttpGet]
+    [Route("lista/buscar/{NomePesquisa}")]
+    public IActionResult Pesquisar ([FromRoute] string NomePesquisa) {
+        foreach (TipoConta TipoConta in _context.TipoConta){
+            if(NomePesquisa == TipoConta.Nome){
+                return Ok (TipoConta);
+            }
+        }
+       return NotFound();
+    }  
+ }
 }
