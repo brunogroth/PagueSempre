@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PagueSempre.Models
 {
@@ -16,7 +17,10 @@ namespace PagueSempre.Models
 
         public Boolean Status {get; set;}
 
-
+        [ForeignKey("TipoConta")]
+        [Column("TipoConta")]
+        public int TipoConta_ID {get; set;}
+        public virtual TipoConta TipoConta {get; set;}
     }
    
 }
