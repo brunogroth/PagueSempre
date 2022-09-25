@@ -1,0 +1,17 @@
+### POST Cadstrar ###
+
+POST https://localhost:5001/api/contas/cadastrar
+Content-Type: application/json
+
+{
+    "Nome" : "Luz",
+    "Descricao" : "Conta de luz",
+    "Valor" : 250.00,
+    "DataVencimento" :  "2022-09-25T08:00:00.000Z",
+    "Status" : false
+}
+
+### Get Listar ###
+
+GET https://localhost:5001/api/contas/listar
+

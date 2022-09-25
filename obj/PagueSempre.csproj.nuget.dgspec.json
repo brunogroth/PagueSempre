@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Dev\\trabalho\\PagueSempre\\PagueSempre.csproj": {}
+    "C:\\Dev\\Trabalho\\PagueSempre\\PagueSempre.csproj": {}
   },
   "projects": {
-    "C:\\Dev\\trabalho\\PagueSempre\\PagueSempre.csproj": {
+    "C:\\Dev\\Trabalho\\PagueSempre\\PagueSempre.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\trabalho\\PagueSempre\\PagueSempre.csproj",
+        "projectUniqueName": "C:\\Dev\\Trabalho\\PagueSempre\\PagueSempre.csproj",
         "projectName": "PagueSempre",
-        "projectPath": "C:\\Dev\\trabalho\\PagueSempre\\PagueSempre.csproj",
-        "packagesPath": "C:\\Users\\adm.rodrigo\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\trabalho\\PagueSempre\\obj\\",
+        "projectPath": "C:\\Dev\\Trabalho\\PagueSempre\\PagueSempre.csproj",
+        "packagesPath": "C:\\Users\\rodrigo.azevedo\\.nuget\\packages\\",
+        "outputPath": "C:\\Dev\\Trabalho\\PagueSempre\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\adm.rodrigo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\rodrigo.azevedo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
