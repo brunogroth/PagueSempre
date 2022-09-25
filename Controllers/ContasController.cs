@@ -14,13 +14,13 @@ namespace PagueSempre.Controllers
     public ContasController(DataContext context) => _context = context;
     private static List<Contas> contas = new List<Contas>();
 
-    //Get /api/estoque/listar
+    //Get /api/contas/listar
     [Route("listar")]
     [HttpGet]
     public IActionResult Listar() =>
         Ok(_context.Contas.ToList());
 
-    //POST /api/estoque/cadastrar
+    //POST /api/contas/cadastrar
     [Route("cadastrar")]
     [HttpPost]
     public IActionResult Cadastrar([FromBody] Contas contas)
