@@ -1,30 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\workspace\\c-sharp-workspace\\PagueSempre\\PagueSempre.csproj": {}
+    "C:\\Dev\\trabalho\\PagueSempre\\PagueSempre.csproj": {}
   },
   "projects": {
-    "C:\\workspace\\c-sharp-workspace\\PagueSempre\\PagueSempre.csproj": {
+    "C:\\Dev\\trabalho\\PagueSempre\\PagueSempre.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\workspace\\c-sharp-workspace\\PagueSempre\\PagueSempre.csproj",
+        "projectUniqueName": "C:\\Dev\\trabalho\\PagueSempre\\PagueSempre.csproj",
         "projectName": "PagueSempre",
-        "projectPath": "C:\\workspace\\c-sharp-workspace\\PagueSempre\\PagueSempre.csproj",
-        "packagesPath": "C:\\Users\\bruno\\.nuget\\packages\\",
-        "outputPath": "C:\\workspace\\c-sharp-workspace\\PagueSempre\\obj\\",
+        "projectPath": "C:\\Dev\\trabalho\\PagueSempre\\PagueSempre.csproj",
+        "packagesPath": "C:\\Users\\adm.rodrigo\\.nuget\\packages\\",
+        "outputPath": "C:\\Dev\\trabalho\\PagueSempre\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\bruno\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\adm.rodrigo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net5.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -35,12 +35,22 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.2.3, )"
+              "version": "[5.6.3, )"
             }
           },
           "imports": [
@@ -49,8 +59,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -62,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     }
