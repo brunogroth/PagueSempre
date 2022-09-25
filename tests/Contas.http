@@ -12,6 +12,23 @@ Content-Type: application/json
 }
 
 ### Get Listar ###
-
 GET https://localhost:5001/api/contas/listar
+
+### Alterar informar ID no JSON ###
+PATCH https://localhost:5001/api/contas/alterar/
+Content-Type: application/json
+
+{
+    "id" : "4",
+    "Nome" : "Internet Móvel",
+    "Descricao" : "Conta de internet Móvel",
+    "Valor" : 150.00,
+    "DataVencimento" :  "2022-09-10T08:00:00.000Z",
+    "Status" : true
+}
+
+### Deletar /deletar/ID ###
+DELETE https://localhost:5001/api/contas/deletar/6
+
+
 

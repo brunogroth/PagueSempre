@@ -28,7 +28,34 @@ namespace PagueSempre.Controllers
         _context.Contas.Add(contas);
         _context.SaveChanges();
         return Created("", contas);
-    }     
+    }
+
+    //Alterar api/contas/alterar
+    [Route("alterar")]
+    [HttpPatch]
+    public IActionResult Alterar([FromBody] Contas contas)     
+    {
+        _context.Contas.Update(contas);
+        _context.SaveChanges();
+        return Ok(contas);
+    }
+
+    [Route("deletar/{id}")]
+    [HttpDelete]
+    public IActionResult Deletar([FromRoute] int ID)
+    {
+        Contas contas = _context.Contas.Find(ID);
+        if (contas != null)
+        {
+            _context.Contas.Remove(contas);
+            _context.SaveChanges();
+            return Ok(contas);
+        }
+
+        return NotFound();
+    }
+
+
 
 
 
