@@ -55,9 +55,17 @@ namespace PagueSempre.Controllers
         return NotFound();
     }
 
+    [HttpGet]
+    [Route("list/search/{NomePesquisa}")]
 
+    public IActionResult Pesquisar([FromRoute] string NomePesquisa){
 
-
-
+        foreach(Contas Conta in _context.Contas){
+            if(NomePesquisa == Conta.Nome){
+                return Ok(Conta);
+            }
+        }
+        return NotFound();
+        }
     }
 }
