@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using System.Linq;
 using PagueSempre.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace PagueSempre.Controllers
 {
@@ -18,7 +20,7 @@ namespace PagueSempre.Controllers
     [Route("listar")]
     [HttpGet]
     public IActionResult Listar() =>
-        Ok(_context.Contas.ToList());
+        Ok(_context.Contas.Include(Contas => Contas.TipoConta).ToList());
 
     //POST /api/contas/cadastrar
     [Route("cadastrar")]
@@ -35,12 +37,16 @@ namespace PagueSempre.Controllers
     [HttpPatch]
     public IActionResult Alterar([FromBody] Contas contas)     
     {
+        if(contas.TipoConta_ID == 0){
+        return NotFound();
+        }
+
         _context.Contas.Update(contas);
         _context.SaveChanges();
         return Ok(contas);
     }
 
-    [Route("deletar/{id}")]
+    [Route("deletar/{ID}")]
     [HttpDelete]
     public IActionResult Deletar([FromRoute] int ID)
     {
