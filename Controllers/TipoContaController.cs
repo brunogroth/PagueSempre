@@ -41,9 +41,9 @@ namespace PagueSempre.Controllers
     //delete/api/tipoconta/deletar
     [Route("deletar/{id}")]
     [HttpDelete]
-    public IActionResult Deletar ([FromRoute] int ID)
+    public IActionResult Deletar ([FromRoute] int id)
     {
-        TipoConta deletarTipoConta = _context.TipoConta.Find(ID);
+        TipoConta deletarTipoConta = _context.TipoConta.Find(id);
         if(deletarTipoConta != null)
         {
             _context.TipoConta.Remove(deletarTipoConta);

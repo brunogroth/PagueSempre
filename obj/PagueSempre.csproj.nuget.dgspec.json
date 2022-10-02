@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\PagueSempre\\PagueSempre.csproj": {}
+    "C:\\workspace\\c-sharp-workspace\\PagueSempre\\PagueSempre.csproj": {}
   },
   "projects": {
-    "C:\\dev\\PagueSempre\\PagueSempre.csproj": {
+    "C:\\workspace\\c-sharp-workspace\\PagueSempre\\PagueSempre.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\PagueSempre\\PagueSempre.csproj",
+        "projectUniqueName": "C:\\workspace\\c-sharp-workspace\\PagueSempre\\PagueSempre.csproj",
         "projectName": "PagueSempre",
-        "projectPath": "C:\\dev\\PagueSempre\\PagueSempre.csproj",
-        "packagesPath": "C:\\Users\\mayfe\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\PagueSempre\\obj\\",
+        "projectPath": "C:\\workspace\\c-sharp-workspace\\PagueSempre\\PagueSempre.csproj",
+        "packagesPath": "C:\\Users\\bruno\\.nuget\\packages\\",
+        "outputPath": "C:\\workspace\\c-sharp-workspace\\PagueSempre\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mayfe\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\bruno\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -59,7 +59,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -71,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
