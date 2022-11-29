@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/PagueSempre/PagueSempre.csproj",
+                "${workspaceFolder}/PagueSempre.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/PagueSempre/PagueSempre.csproj",
+                "${workspaceFolder}/PagueSempre.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/PagueSempre/PagueSempre.csproj"
+                "${workspaceFolder}/PagueSempre.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
