@@ -81,7 +81,7 @@
 
 ## 🤝 Contributing
 - Contributions, issues, and feature requests are welcome!
-- Feel free to check the [issues page](https://github.com/brunogroth/Palpitometro/issues).
+- Feel free to check the [issues page](https://github.com/brunogroth/PagueSempre/issues).
 
 ## Show your support
 Give a ⭐ if you like this project!
