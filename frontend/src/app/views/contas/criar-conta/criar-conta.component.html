@@ -1,30 +1,40 @@
-<h1>Cadastro de contas</h1>
+<div class="card col-md-6 col-sm-12 mb-4">
+    <div class="card-body col-md-10 col-sm-12">
+        <h2>Cadastro de contas</h2>
+        <form>
+            <div id="nome" class="form-group">
+                <label for="txtNome">Nome</label>
+                <input class="form-control" type="string" id="txtNome" [(ngModel)]="nome" />
+            </div>
 
-<div id="nome">
-    <label for="txtNome">Nome</label>
-    <input type="string" id="txtNome" [(ngModel)]="nome" />
-</div>
+            <div id="descricao" class="form-group">
+                <label for="txtDescricao">Descrição</label>
+                <input class="form-control" type="string" id="txtDescricao" [(ngModel)]="descricao" />
+            </div>
 
-<div id="descricao">
-    <label for="txtDescricao">Descrição</label>
-    <input type="string" id="txtDescricao" [(ngModel)]="descricao" />
-</div>
+            <div id="valor" class="form-group">
+                <label for="txtValor">Valor</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">R$</span>
+                    </div>
+                    <input class="form-control" type="number" id="txtValor" [(ngModel)]="valor" />
+                </div>
+            </div>
 
-<div id="valor">
-    <label for="txtValor">Valor</label>
-    <input type="number" id="txtValor" [(ngModel)]="valor" />
-</div>
+            <div id="tipoconta">
+                <label for="selTipoCOnta">Tipo de conta</label>
+                <select class="form-control" [(ngModel)]="tipoconta">
+                    <option *ngFor="let tipoconta of tipoconta">
+                        {{ tipoconta?.nome }}
+                    </option>
+                </select>
 
-<div id="tipoconta">
-    <label for="selTipoCOnta">Tipo de conta</label>
-    <select [(ngModel)]="tipoconta_id">
-        <option *ngFor="let tipoconta of tipoconta">
-           {{ tipoconta?.nome }}
-        </option>
-    </select>
-    
-    </div> 
+            </div>
 
-<div>
-    <button (click)="cadastrar()">Cadastrar</button>
+            <div class="text-right">
+                <button class="btn btn-success mt-3" (click)="cadastrar()">Cadastrar</button>
+            </div>
+        </form>
+    </div>
 </div>

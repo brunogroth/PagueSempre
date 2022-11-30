@@ -12,6 +12,8 @@ export class ListarContaComponent implements OnInit {
 
   tipoconta!: TipoConta[]
   contas!: Conta[];
+  status?: String;
+  tipocontaNome = String;
 
   constructor(private http: HttpClient) { }
 
@@ -21,11 +23,18 @@ export class ListarContaComponent implements OnInit {
     .subscribe({
       next: (contas) => {
         this.contas = contas; 
-        console.log(contas)
+        
+      }
+    })
+    this.http.get<TipoConta[]>("https://localhost:5001/api/tipoconta/listar")
+    .subscribe({
+      next: (tipoconta) => {
+
+        this.tipoconta = tipoconta;
       }
     })
   }
-  
+
   //Remove a conta pelo ID ao ser clicado
   remover(id: number): void {
     this.http.delete<Conta>(`https://localhost:5001/api/contas/deletar/${id}`)

@@ -1,13 +1,37 @@
-<h1>Pague Sempre</h1>
-<nav> 
-  <ul>
-    <li><a routerLink="/contas/criar" routerLinkActive="active" ariaCurrentWhenActive="page">Criar Conta</a></li>
-    <li><a routerLink="/contas" routerLinkActive="active" ariaCurrentWhenActive="page">Listar Contas</a></li>
-    <li><a routerLink="/tipoconta/criar" routerLinkActive="active" ariaCurrentWhenActive="page">Criar Tipos de Contas</a></li>
-    <li><a routerLink="/tipoconta/listar" routerLinkActive="active" ariaCurrentWhenActive="page">Listar Tipo de Contas</a></li>
-  </ul>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Pague Sempre</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Contas
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" routerLink="/contas/criar" routerLinkActive="active"  ariaCurrentWhenActive="page">Criar Conta</a>
+          <a class="dropdown-item" routerLink="/contas" routerLinkActive="active"  ariaCurrentWhenActive="page">Listar Contas</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Tipo de Conta
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" routerLink="/tipoconta/criar" routerLinkActive="active" ariaCurrentWhenActive="page">Criar Tipos de Conta</a>
+          <a class="dropdown-item" routerLink="/tipoconta/listar" routerLinkActive="active" ariaCurrentWhenActive="page">Listar Tipo de Conta</a>
+        </div>
+      </li>
+    </ul>
+  </div>
 </nav>
 
-<router-outlet></router-outlet>
-
+  <h1 class="text-primary my-4">Pague Sempre</h1>
+<div class="container-fluid">
+  <router-outlet></router-outlet>
+</div>
 

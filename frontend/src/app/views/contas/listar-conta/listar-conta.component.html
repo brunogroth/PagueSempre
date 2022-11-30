@@ -1,36 +1,34 @@
-<h1>Contas cadastradas</h1>
-
-<table>
+<h2>Contas cadastradas</h2>
+<div>
+<table class="table">
     <tr>
-        <th>#</th>
-        <th>Nome</th>
-        <th>Descrição</th>
-        <th>Valor</th>
-        <th>Data de vencimento</th>
-        <th>Status</th>
-        <th>Tipo de conta</th>
-        <th>Remover</th>
-        <th>Alterar</th>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Valor</th>
+        <th scope="col">Data de vencimento</th>
+        <th scope="col">Status</th>
+        <th scope="col">Tipo de conta</th>
+        <th scope="col">Remover</th>
+        <th scope="col">Alterar</th>
     </tr>
 
-    <tr *ngFor="let contas of contas">
+    <tr *ngFor="let contas of contas" scope="row">
         <td>{{contas.id}}</td>
         <td>{{contas.nome}}</td>
         <td>{{contas.descricao}}</td>
-        <td>{{contas.valor}}</td>
+        <td>R${{contas.valor}},00</td>
         <td>{{contas.dataVencimento}}</td>
-        <td>{{contas.status}}</td>
-        <td *ngFor="let tipoconta of tipoconta">   
-            {{ tipoconta.id }} 
-        </td>
-        <td>TipoConta</td>
+        <td>{{contas.status ? "Pago" : "Pendente"}}</td>
+        <td>{{contas.tipoconta}}</td>
         <td>
-            <button (click)="remover(contas.id!)">Remover</button>
+            <button class="btn btn-danger" (click)="remover(contas.id!)">Remover</button>
         </td>
 
         <td>
-            <a routerLink="alterar/{{contas.id}}">Alterar</a>
+            <a class="btn btn-warning" routerLink="alterar/{{contas.id}}">Alterar</a>
         </td>
         
     </tr>
 </table>
+</div>

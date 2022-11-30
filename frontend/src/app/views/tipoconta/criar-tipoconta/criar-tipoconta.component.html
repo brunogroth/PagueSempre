@@ -1,21 +1,21 @@
-<h1>Cadastrar Tipo de contas</h1>
+<div class="card col-md-6 col-sm-12 mb-4">
+    <div class="card-body col-md-10 col-sm-12">
+        <h2>Cadastro de Tipo de Conta</h2>
+        <form>
+            <div id="nome" class="form-group">
+                <label for="txtNome">Nome</label>
+                <input class="form-control" type="string" id="txtNome" [(ngModel)]="nome" />
+            </div>
 
-<div id="nome">
-    <label for="txtNome">Nome</label>
-    <input type="string" id="txtNome" [(ngModel)]="nome" />
+
+            <div id="descricao" class="form-group">
+                <label for="txtDescricao">Descrição</label>
+                <input class="form-control" type="string" id="txtDescricao" [(ngModel)]="descricao" />
+            </div>
+
+            <div class="text-right">
+                <button class="btn btn-success mt-3" (click)="cadastrar()">Cadastrar</button>
+            </div>
+        </form>
+    </div>
 </div>
-
-
-<div id="descricao">
-    <label for="txtDescricao">Descrição</label>
-    <input type="string" id="txtDescricao" [(ngModel)]="descricao" />
-</div>
-
-<div>
-    <button (click)="cadastrar()">Cadastrar</button>
-</div>
-
-
-
-
-

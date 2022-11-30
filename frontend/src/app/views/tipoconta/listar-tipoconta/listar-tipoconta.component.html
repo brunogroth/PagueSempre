@@ -1,14 +1,13 @@
 <h1>Lista Tipo Conta</h1>
 
-<table>
-
+<table class="table">
     <tr>
-        <th>#</th>
-        <th>Nome</th>
-        <th>Descrição</th>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrição</th>
     </tr>
 
-    <tr *ngFor="let tipoconta of tipoconta">
+    <tr *ngFor="let tipoconta of tipoconta" scope="row">
         <td>{{tipoconta.id}}</td>
         <td>{{tipoconta.nome}}</td>
         <td>{{tipoconta.descricao}}</td>
