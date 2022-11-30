@@ -1,1 +1,30 @@
-<p>criar-conta works!</p>
+<h1>Cadastro de contas</h1>
+
+<div id="nome">
+    <label for="txtNome">Nome</label>
+    <input type="string" id="txtNome" [(ngModel)]="nome" />
+</div>
+
+<div id="descricao">
+    <label for="txtDescricao">Descrição</label>
+    <input type="string" id="txtDescricao" [(ngModel)]="descricao" />
+</div>
+
+<div id="valor">
+    <label for="txtValor">Valor</label>
+    <input type="number" id="txtValor" [(ngModel)]="valor" />
+</div>
+
+<div id="tipoconta">
+    <label for="selTipoCOnta">Tipo de conta</label>
+    <select [(ngModel)]="tipoconta_id">
+        <option *ngFor="let tipoconta of tipoconta">
+           {{ tipoconta?.nome }}
+        </option>
+    </select>
+    
+    </div> 
+
+<div>
+    <button (click)="cadastrar()">Cadastrar</button>
+</div>

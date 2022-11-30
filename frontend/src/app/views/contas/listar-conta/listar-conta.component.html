@@ -1,1 +1,36 @@
-<p>listar-conta works!</p>
+<h1>Contas cadastradas</h1>
+
+<table>
+    <tr>
+        <th>#</th>
+        <th>Nome</th>
+        <th>Descrição</th>
+        <th>Valor</th>
+        <th>Data de vencimento</th>
+        <th>Status</th>
+        <th>Tipo de conta</th>
+        <th>Remover</th>
+        <th>Alterar</th>
+    </tr>
+
+    <tr *ngFor="let contas of contas">
+        <td>{{contas.id}}</td>
+        <td>{{contas.nome}}</td>
+        <td>{{contas.descricao}}</td>
+        <td>{{contas.valor}}</td>
+        <td>{{contas.dataVencimento}}</td>
+        <td>{{contas.status}}</td>
+        <td *ngFor="let tipoconta of tipoconta">   
+            {{ tipoconta.id }} 
+        </td>
+        <td>TipoConta</td>
+        <td>
+            <button (click)="remover(contas.id!)">Remover</button>
+        </td>
+
+        <td>
+            <a routerLink="alterar/{{contas.id}}">Alterar</a>
+        </td>
+        
+    </tr>
+</table>

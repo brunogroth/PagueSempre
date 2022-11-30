@@ -1,0 +1,17 @@
+<h1>Lista Tipo Conta</h1>
+
+<table>
+
+    <tr>
+        <th>#</th>
+        <th>Nome</th>
+        <th>Descrição</th>
+    </tr>
+
+    <tr *ngFor="let tipoconta of tipoconta">
+        <td>{{tipoconta.id}}</td>
+        <td>{{tipoconta.nome}}</td>
+        <td>{{tipoconta.descricao}}</td>
+    </tr>
+ 
+</table>
