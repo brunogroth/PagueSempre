@@ -54,10 +54,10 @@ namespace PagueSempre.Controllers
     }
     //pesquisar/api/tipoconta/buscar
     [HttpGet]
-    [Route("lista/buscar/{NomePesquisa}")]
-    public IActionResult Pesquisar ([FromRoute] string NomePesquisa) {
+    [Route("lista/buscar/{id}")]
+    public IActionResult Pesquisar ([FromRoute] int id) {
         foreach (TipoConta TipoConta in _context.TipoConta){
-            if(NomePesquisa == TipoConta.Nome){
+            if(id == TipoConta.ID){
                 return Ok (TipoConta);
             }
         }

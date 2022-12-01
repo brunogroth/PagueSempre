@@ -62,12 +62,12 @@ namespace PagueSempre.Controllers
     }
 
     [HttpGet]
-    [Route("list/search/{NomePesquisa}")]
+    [Route("list/search/{id}")]
 
-    public IActionResult Pesquisar([FromRoute] string NomePesquisa){
+    public IActionResult Pesquisar([FromRoute] int id){
 
         foreach(Contas Conta in _context.Contas){
-            if(NomePesquisa == Conta.Nome){
+            if(id == Conta.ID){
                 return Ok(Conta);
             }
         }
@@ -75,3 +75,5 @@ namespace PagueSempre.Controllers
         }
     }
 }
+
+

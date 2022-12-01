@@ -285,3 +285,5 @@ C:\Dev\paguesempreOficial\PagueSempre\PagueSempre\obj\Debug\net5.0\refint\PagueS
 C:\Dev\paguesempreOficial\PagueSempre\PagueSempre\obj\Debug\net5.0\PagueSempre.pdb
 C:\Dev\paguesempreOficial\PagueSempre\PagueSempre\obj\Debug\net5.0\PagueSempre.genruntimeconfig.cache
 C:\Dev\paguesempreOficial\PagueSempre\PagueSempre\obj\Debug\net5.0\ref\PagueSempre.dll
+C:\workspace\c-sharp-workspace\PagueSempre\PagueSempre\bin\Debug\net5.0\package-lock.json
+C:\workspace\c-sharp-workspace\PagueSempre\PagueSempre\bin\Debug\net5.0\package.json

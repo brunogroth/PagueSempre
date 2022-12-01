@@ -1,7 +1,8 @@
 <div class="card col-md-6 col-sm-12 mb-4">
     <div class="card-body col-md-10 col-sm-12">
-        <h2>Cadastro de Tipo de Conta</h2>
-        <form>
+        <h2 *ngIf="!id">Cadastrar Tipo de Conta</h2>
+        <h2 *ngIf="id">Editar Tipo de Conta</h2>
+        <div class="form">
             <div id="nome" class="form-group">
                 <label for="txtNome">Nome</label>
                 <input class="form-control" type="string" id="txtNome" [(ngModel)]="nome" />
@@ -14,8 +15,9 @@
             </div>
 
             <div class="text-right">
-                <button class="btn btn-success mt-3" (click)="cadastrar()">Cadastrar</button>
+                <button *ngIf="!id" id="btnCadastrar" (click)="cadastrar()"  class="btn btn-success mt-3">Cadastrar</button>
+                <button *ngIf="id" id="btnCadastrar" (click)="alterar()"  class="btn btn-success mt-3">Salvar</button>
             </div>
-        </form>
+        </div>
     </div>
 </div>

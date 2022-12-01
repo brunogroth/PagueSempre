@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'contas/alterar/:id', component: CriarContaComponent },
   { path: 'tipoconta/criar', component: CriarTipocontaComponent },
   { path: 'tipoconta/listar', component: ListarTipocontaComponent },
+  { path: 'tipoconta/alterar/:id', component: CriarTipocontaComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

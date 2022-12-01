@@ -1,5 +1,5 @@
-<h1>Lista Tipo Conta</h1>
-
+<h1>Tipos de Contas Cadastradas</h1>
+<p> Separe as suas contas por Tipo de Conta, para manter um controle e organização financeira.
 <table class="table">
     <tr>
         <th scope="col">#</th>
@@ -11,6 +11,13 @@
         <td>{{tipoconta.id}}</td>
         <td>{{tipoconta.nome}}</td>
         <td>{{tipoconta.descricao}}</td>
+        <td>
+            <button class="btn btn-danger" (click)="remover(tipoconta.id!)">Remover</button>
+        </td>
+    
+        <td>
+            <a class="btn btn-warning" routerLink="/tipoconta/alterar/{{tipoconta.id}}">Alterar</a>
+        </td>
     </tr>
- 
+
 </table>

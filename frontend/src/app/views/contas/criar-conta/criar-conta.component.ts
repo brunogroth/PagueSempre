@@ -11,7 +11,7 @@ import { TipoConta } from 'src/app/models/tipoconta';
 })
 export class CriarContaComponent implements OnInit {
 
-  id?: number;
+  id!:number;
   nome!: string;
   descricao!: string;
   valor!: number;
@@ -25,6 +25,22 @@ export class CriarContaComponent implements OnInit {
   constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe({
+      next: (params) => {
+        let { id } = params;
+        if(id !== undefined){
+      this.http.get<Conta>("https://localhost:5001/api/Contas/list/search/"+id)
+    //Executar a requisição
+      .subscribe({
+        next: (conta) => {
+          this.id = id;
+          this.nome = conta.nome;
+          this.descricao = conta.descricao;
+          }
+        });
+      }
+    }
+  })
 
     //para fazer o select do tipo conta na hora de cadastrar
     this.http.get<TipoConta[]>("https://localhost:5001/api/tipoconta/listar")
@@ -59,15 +75,15 @@ export class CriarContaComponent implements OnInit {
       nome: this.nome,
       descricao: this.descricao,
       valor: this.valor,
-      dataVencimento: '2022-11-22T00:51:59.100Z', //Dado estático
-      status: false, //Dado estático
-      tipoconta_id: 1 //eu sinceramnte nao sei porque tem esse aqui mas só consegui fazer fucionar com ele haha
+      dataVencimento: '2022-11-22T00:51:59.100Z',
+      status: this.status,
+      tipoconta_id: this.tipoconta_id
     };
 
     this.http.patch<Conta>("https://localhost:5001/api/contas/alterar", conta)
     .subscribe({
       next: (conta) => {
-        this.router.navigate(["pages/conta/listar"]);
+        this.router.navigate(["contas"]);
       },
     });
   }
@@ -79,10 +95,9 @@ export class CriarContaComponent implements OnInit {
       nome: this.nome,
       descricao: this.descricao,
       valor: this.valor,
-      dataVencimento: '2022-11-22T00:51:59.100Z', //Dado estático
-      status: false, //Dado estático
-      tipoconta_id: 1 //eu sinceramnte nao sei porque tem esse aqui mas só consegui fazer fucionar com ele haha
-      
+      dataVencimento: '2022-11-22T00:51:59.100Z',
+      status: false,
+      tipoconta_id: this.tipoconta_id
       
     };
 

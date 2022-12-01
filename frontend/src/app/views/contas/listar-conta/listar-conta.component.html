@@ -8,7 +8,6 @@
         <th scope="col">Valor</th>
         <th scope="col">Data de vencimento</th>
         <th scope="col">Status</th>
-        <th scope="col">Tipo de conta</th>
         <th scope="col">Remover</th>
         <th scope="col">Alterar</th>
     </tr>
@@ -18,9 +17,8 @@
         <td>{{contas.nome}}</td>
         <td>{{contas.descricao}}</td>
         <td>R${{contas.valor}},00</td>
-        <td>{{contas.dataVencimento}}</td>
-        <td>{{contas.status ? "Pago" : "Pendente"}}</td>
-        <td>{{contas.tipoconta}}</td>
+        <td>{{contas.dataVencimento | date : 'dd/MM/yyyy'}}</td>
+        <td><span class="btn btn-primary bg-white text-dark" (click)="alterarStatus(contas)">{{contas.status ? "Pago" : "Pendente"}}</span></td>
         <td>
             <button class="btn btn-danger" (click)="remover(contas.id!)">Remover</button>
         </td>

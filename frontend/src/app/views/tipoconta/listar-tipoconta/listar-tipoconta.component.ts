@@ -24,5 +24,14 @@ export class ListarTipocontaComponent implements OnInit {
       }
     })
   }
-
+  
+  //Remove a conta pelo ID ao ser clicado
+  remover(id: number): void {
+    this.http.delete<TipoConta>(`https://localhost:5001/api/TipoConta/deletar/${id}`)
+    .subscribe({
+      next: () => {
+        this.ngOnInit();
+      },
+    });
+  }
 }
